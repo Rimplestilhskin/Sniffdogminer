@@ -22,7 +22,7 @@ $Name = Get-Item $MyInvocation.MyCommand.Path | Select-Object -ExpandProperty Ba
 $Location = 'Europe', 'US'
 $zergpool_Request | Get-Member -MemberType NoteProperty -ErrorAction Ignore | Select -ExpandProperty Name | foreach {
 #$zergpool_Request | Get-Member -MemberType NoteProperty -ErrorAction Ignore | Select-Object -ExpandProperty Name | Where-Object {$zergpool_Request.$_.hashrate -gt 0} | foreach {
-    $zergpool_Host = "zergpool.com"
+    $zergpool_Host = "mine.zergpool.com"
     $zergpool_Port = $zergpool_Request.$_.port
     $zergpool_Algorithm = Get-Algorithm $zergpool_Request.$_.name
     $zergpool_Coin = $zergpool_Request.$_.coins
@@ -43,8 +43,7 @@ $zergpool_Request | Get-Member -MemberType NoteProperty -ErrorAction Ignore | Se
 	"x11"{$Divisor *= 1000}
 	"scrypt"{$Divisor *= 1000}
 	"qubit"{$Divisor *= 1000}
-	"yescrypt"{$Divisor /= 1000}
-				
+	"yescrypt"{$Divisor /= 1000}	
     }
 
 			
