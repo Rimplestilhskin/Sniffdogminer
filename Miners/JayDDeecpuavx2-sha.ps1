@@ -1,41 +1,22 @@
-﻿$Path = ".\Bin\CPU-JayDDee\cpuminer-avx2.exe"
+﻿$Path = ".\Bin\CPU-JayDDee\cpuminer-avx2-sha.exe"
 $Uri = "https://github.com/JayDDee/cpuminer-opt/files/1939225/cpuminer-opt-3.8.8-windows.zip"
 
 $Commands = [PSCustomObject]@{
-    #"bitcore" = "" #Bitcore
-    #"blake2s" = "" #Blake2s
-    #"blakecoin" = "" #Blakecoin
-    #"vanilla" = "" #BlakeVanilla
-    #"cryptonight" = "" #Cryptonight
-    #"decred" = "" #Decred
-    #"equihash" = "" #Equihash
-    #"ethash" = "" #Ethash
-    #"groestl" = "" #Groestl
-    #"hmq1725" = "" #hmq1725
-    #"keccak" = "" #Keccak
-    #"lbry" = "" #Lbry
-    #"lyra2v2" = "" #Lyra2RE2
-    #"lyra2z" = "" #Lyra2z
-    #"myr-gr" = "" #MyriadGroestl
-    #"neoscrypt" = "" #NeoScrypt
-    #"nist5" = "" #Nist5
-    #"pascal" = "" #Pascal
-    #"qubit" = "" #Qubit
-    #"scrypt" = "" #Scrypt
-    #"sia" = "" #Sia
-    #"sib" = "" #Sib
-    #"skein" = "" #Skein
-    #"timetravel" = "" #Timetravel
-    #"x11" = "" #X11
-    #"x11evo" = "" #X11evo
-    #"x17" = "" #X17
+    #"lyra2z" = "" #Difficulty might be ignored - more testing needed.
+    #"cryptonight" = " -t 16 --cpu-affinity 0x5555" #Threadripper 1950X
+    #"timetravel" = ",d=0.5"
+    #"x17" = ""  #needs a very fast CPU, so may not be practical to enable by default
+    #"bitcore" = ",d=0.02"
+    #"xevan" = ""
+    #"x11evo" = "" #needs a very fast CPU, so may not be practical to enable by default
     #"yescrypt" = "" #Yescrypt
-    "m7m" = "" #M7M
+    #"m7m" = "" #M7M
     #"lyra2h" = "" #Lyra2h
     #"yescryptr8" = "" #Yescryptr8
     #"x16r" = "" #Ravencoin
     #"yescryptr16" = "" #Yenten
     #"cryptonightv7" = "" #Cryptonightv7
+
 }
 
 $Name = (Get-Item $script:MyInvocation.MyCommand.Path).BaseName

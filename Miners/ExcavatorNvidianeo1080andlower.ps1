@@ -1,15 +1,13 @@
 ﻿
 
-$Threads = 3
+$Threads = 1
 
-$Path = ".\Bin\Excavator\excavator.exe"
-$Uri = "https://github.com/nicehash/excavator/releases/download/v1.4.4a/excavator_v1.4.4a_NVIDIA_Win64.zip"
+$Path = ".\Bin\Excavator1080\excavator.exe"
+$Uri = "https://github.com/nicehash/excavator/releases/download/v1.4.3a/excavator_v1.4.3a_NVIDIA_Win64.zip"
 
 $Commands = [PSCustomObject]@{
-    #"equihash" = @() 
-    #"lbry" = @() 
-    #"lyra2rev2" = @() 
-    #"nist5" = @()
+    
+    #"neoscrypt" = @() 
     
 }
 
@@ -40,7 +38,7 @@ $Commands | Get-Member -MemberType NoteProperty | Select-Object -ExpandProperty 
                 [PSCustomObject]@{time = 3; commands = @([PSCustomObject]@{id = 1; method = "worker.add"; params = @("0", "16") + $Commands.$_}) * $Threads},
                 [PSCustomObject]@{time = 3; commands = @([PSCustomObject]@{id = 1; method = "worker.add"; params = @("0", "17") + $Commands.$_}) * $Threads},
                 [PSCustomObject]@{time = 3; commands = @([PSCustomObject]@{id = 1; method = "worker.add"; params = @("0", "18") + $Commands.$_}) * $Threads},
-[PSCustomObject]@{time = 3; commands = @([PSCustomObject]@{id = 1; method = "worker.add"; params = @("0", "19") + $Commands.$_}) * $Threads},
+                [PSCustomObject]@{time = 3; commands = @([PSCustomObject]@{id = 1; method = "worker.add"; params = @("0", "19") + $Commands.$_}) * $Threads},
                 [PSCustomObject]@{time = 10; loop = 10; commands = @([PSCustomObject]@{id = 1; method = "algorithm.print.speeds"; params = @("0")})} | ConvertTo-Json -Depth 10 | Set-Content "$(Split-Path $Path)\$($Pools.$(Get-Algorithm $_).Name)_$(Get-Algorithm $_)_$($Pools.$(Get-Algorithm $_).User)_$($Threads)_Nvidia.json" -Force -ErrorAction Stop
             }
 

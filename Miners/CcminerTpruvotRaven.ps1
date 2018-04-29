@@ -1,6 +1,6 @@
 . .\Include.ps1
 
-$Path = '.\Bin\NVIDIA-TPruvot\ccminer-x64.exe'
+$Path = '.\Bin\NVIDIA-TPruvot2.2.5\ccminer-x64.exe'
 $Uri = 'https://github.com/MSFTserver/ccminer/releases/download/2.2.5-rvn/ccminer-x64-2.2.5-rvn-cuda9.7z'
 
 $Name = (Get-Item $script:MyInvocation.MyCommand.Path).BaseName
@@ -34,13 +34,13 @@ $Algorithms = [PSCustomObject]@{
     #Blakecoin = 'blakecoin'
     #Lbry = 'lbry'
     Jha = 'jha'
-    Skunk = 'skunk'
-    Tribus = 'tribus'
-    Phi = 'phi'
+    #Skunk = 'skunk'
+    #Tribus = 'tribus'
+    #Phi = 'phi'
     #Hsr = 'hsr'
     #Polytimos = 'polytimos'
     Decred = 'decred'
-    X16r = 'x16r'
+    #X16r = 'x16r'
 }
 
 $Optimizations = [PSCustomObject]@{

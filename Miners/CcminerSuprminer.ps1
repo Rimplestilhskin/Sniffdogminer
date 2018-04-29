@@ -1,5 +1,7 @@
-﻿$Path = '.\Bin\NVIDIA-Poly\ccminer.exe'
-$Uri = 'https://github.com/punxsutawneyphil/ccminer/releases/download/polytimosv2/ccminer-polytimos_v2.zip'
+. .\Include.ps1
+
+$Path = '.\Bin\NVIDIA-Suprminer\ccminer.exe'
+$Uri = 'https://github.com/ocminer/suprminer/releases/download/1.6/suprminer-1.6.7z'
 
 $Name = (Get-Item $script:MyInvocation.MyCommand.Path).BaseName
 
@@ -36,25 +38,28 @@ $Algorithms = [PSCustomObject]@{
     #Tribus = 'tribus'
     #Phi = 'phi'
     #Hsr = 'hsr'
-    #Polytimos = 'poly'
+    #Polytimos = 'polytimos'
+    #Decred = 'decred'
+    X16r = 'x16r'
+    X16s = 'x16s'
 }
 
 $Optimizations = [PSCustomObject]@{
-    Lyra2z = ' --api-remote --api-allow=0/0'
+    Lyra2z = ' --api-remote --api-allow=0/0 --submit-stale'
     Equihash = ''
-    Cryptonight = ' --api-remote --api-allow=0/0'
+    Cryptonight = ' -i 10 --api-remote --api-allow=0/0'
     Ethash = ''
     Sia = ''
     Yescrypt = ''
     BlakeVanilla = ''
-    Lyra2RE2 = ''
+    Lyra2RE2 = ' --api-remote --api-allow=0/0'
     Skein = ''
     Qubit = ''
     NeoScrypt = ''
     X11 = ''
     MyriadGroestl = ''
     Groestl = ''
-    Keccak = ''
+    Keccak = ' --api-remote --api-allow=0/0'
     Scrypt = ''
     Bitcore = ' --api-remote --api-allow=0/0'
     Blake2s = ''
@@ -63,16 +68,19 @@ $Optimizations = [PSCustomObject]@{
     Quark = ''
     Hmq1725 = ' --api-remote --api-allow=0/0'
     Veltor = ''
-    X11evo = ''
+    X11evo = ' --api-remote --api-allow=0/0'
     Timetravel = ' --api-remote --api-allow=0/0'
     Blakecoin = ''
     Lbry = ''
     Jha = ' --api-remote --api-allow=0/0'
     Skunk = ' --api-remote --api-allow=0/0'
     Tribus = ' --api-remote --api-allow=0/0'
-    Phi = ' --api-remote --api-allow=0/0'
+    Phi = ' -i 23 --api-remote --api-allow=0/0'
     Hsr = ' --api-remote --api-allow=0/0'
-    Polytimos = '' 
+    Polytimos = ' --api-remote --api-allow=0/0'
+    Decred = ' --api-remote --api-allow=0/0'
+    X16r = ''
+    X16s = ''
     
 }
 
@@ -81,12 +89,10 @@ $Algorithms | Get-Member -MemberType NoteProperty | Select -ExpandProperty Name 
         Type = 'NVIDIA'
         Path = $Path
         Arguments = -Join ('-a ', $Algorithms.$_, ' -o stratum+tcp://$($Pools.', $_, '.Host):$($Pools.', $_, '.Port) -u $($Pools.', $_, '.User) -p $($Pools.', $_, '.Pass)', $Optimizations.$_)
-        HashRates = [PSCustomObject]@{$_ = -Join ('$($Stats.', $Name, '_', $_, '_HashRate.Day)')}
-        API = 'Ccminer'
+        HashRates = [PSCustomObject]@{$_ = -Join ('$($Stats.', $Name, '_', $_, '_HashRate.Week)')}
+        API = 'Wrapper'
         Port = 4068
-        Wrap = $false
+        Wrap = $true
         URI = $Uri
-        PrerequisitePath = "$env:SystemRoot\System32\msvcr120.dll"
-        PrerequisiteURI = "http://download.microsoft.com/download/2/E/6/2E61CFA4-993B-4DD4-91DA-3737CD5CD6E3/vcredist_x64.exe"
     }
 }

@@ -13,6 +13,8 @@
     [String]$API_Key = "", 
     [Parameter(Mandatory=$false)]
     [Int]$Interval = 90, #seconds before reading hash rate from miners
+    [Parameter(Mandatory=$false)] 
+    [Int]$StatsInterval = $null, #seconds of current active to gather hashrate if not gathered yet 
     [Parameter(Mandatory=$false)]
     [String]$Location = "US", #europe/us/asia
     [Parameter(Mandatory=$false)]
@@ -92,11 +94,19 @@ while($true)
         $WorkerName = $WorkerNameBackup
         $LastDonated = Get-Date
     }
-    Write-host "Loading BTC rate from 'api.coinbase.com'.." -foregroundcolor "Yellow"
-    $Rates = Invoke-RestMethod "https://api.coinbase.com/v2/exchange-rates?currency=BTC" -UseBasicParsing | Select-Object -ExpandProperty data | Select-Object -ExpandProperty rates
-    $Currency | Where-Object {$Rates.$_} | ForEach-Object {$Rates | Add-Member $_ ([Double]$Rates.$_) -Force}
-    Write-Host -ForegroundColor Yellow "Last Refresh: $(Get-Date)"
+    try {
+        Write-Host "SniffDog dumps then checks for updates from Coinbase..." -foregroundcolor "Yellow"
+        $Rates = Invoke-RestMethod "https://api.coinbase.com/v2/exchange-rates?currency=BTC" -UseBasicParsing | Select-Object -ExpandProperty data | Select-Object -ExpandProperty rates
+        $Currency | Where-Object {$Rates.$_} | ForEach-Object {$Rates | Add-Member $_ ([Double]$Rates.$_) -Force}
+    }
+    catch {
+    Write-Host -Level Warn "Pee's on Coinbase. "
 
+    Write-Host -ForegroundColor Yellow "Last Refresh: $(Get-Date)"
+    Write-host "tries Sniffin at Cryptonator.." -foregroundcolor "Yellow"
+        $Rates = [PSCustomObject]@{}
+        $Currency | ForEach {$Rates | Add-Member $_ (Invoke-WebRequest "https://api.cryptonator.com/api/ticker/btc-$_" -UseBasicParsing | ConvertFrom-Json).ticker.price}
+   }
     #Load the Stats
     $Stats = [PSCustomObject]@{}
     if(Test-Path "Stats"){Get-ChildItemContent "Stats" | ForEach {$Stats | Add-Member $_.Name $_.Content}}
@@ -260,6 +270,7 @@ while($true)
                 Status = "Idle"
                 HashRate = 0
                 Benchmarked = 0
+                Hashrate_Gathered = ($_.HashRates.PSObject.Properties.Value -ne $null)
             }
         }
     }
@@ -297,17 +308,6 @@ while($true)
     
     #Display mining information
     Clear-Host
-    Write-Host "1BTC = " $Rates.$Currency "$Currency"
-    $Miners | Where {$_.Profit -ge 1E-5 -or $_.Profit -eq $null} | Sort -Descending Type,Profit | Format-Table -GroupBy Type (
-        @{Label = "Miner"; Expression={$_.Name}}, 
-        @{Label = "Algorithm"; Expression={$_.HashRates.PSObject.Properties.Name}}, 
-        @{Label = "Speed"; Expression={$_.HashRates.PSObject.Properties.Value | ForEach {if($_ -ne $null){"$($_ | ConvertTo-Hash)/s"}else{"Benchmarking"}}}; Align='right'}, 
-        @{Label = "BTC/Day"; Expression={$_.Profits.PSObject.Properties.Value | ForEach {if($_ -ne $null){$_.ToString("N5")}else{"Benchmarking"}}}; Align='right'}, 
-        @{Label = "BTC/GH/Day"; Expression={$_.Pools.PSObject.Properties.Value.Price | ForEach {($_*1000000000).ToString("N5")}}; Align='right'},
-        @{Label = "$Currency/Day"; Expression={$_.Profits.PSObject.Properties.Value | ForEach {if($_ -ne $null){($_ * $Rates.$Currency).ToString("N3")}else{"Benchmarking"}}}; Align='right'}, 
-        @{Label = "Pool"; Expression={$_.Pools.PSObject.Properties.Value | ForEach {"$($_.Name)-$($_.Info)"}}}
-    ) | Out-Host
-    
     #Display active miners list
     $ActiveMinerPrograms | Sort -Descending Status,{if($_.Process -eq $null){[DateTime]0}else{$_.Process.StartTime}} | Select -First (1+6+6) | Format-Table -Wrap -GroupBy Status (
         @{Label = "Speed"; Expression={$_.HashRate | ForEach {"$($_ | ConvertTo-Hash)/s"}}; Align='right'}, 
@@ -315,6 +315,67 @@ while($true)
         @{Label = "Launched"; Expression={Switch($_.Activated){0 {"Never"} 1 {"Once"} Default {"$_ Times"}}}}, 
         @{Label = "Command"; Expression={"$($_.Path.TrimStart((Convert-Path ".\"))) $($_.Arguments)"}}
     ) | Out-Host
+        #Write-Host "..........Excavator is dormant in Sniffdog for Neoscrypt,Keccak,Lyra2rev2, and Nist5..............." -foregroundcolor "Green"
+        #Write-Host "..........Remove # in front of Algo in ExcavatorNvidianeo.ps1 file in Miners Folder......................" -foregroundcolor "Green"  
+        #Write-Host "................Then restart SniffDog and let Excavator Download to Bin Folder..........................." -foregroundcolor "Green"
+        #Write-Host "................Shutdown SniffDog....Goto Bin Folder and to Excavator Folder............................." -foregroundcolor "Green"
+        #Write-Host "...........Find Files and move back one folder so it's Bin\Excavator\excavator.exe......................." -foregroundcolor "Green"
+        #Write-Host ""
+        #Write-Host "..........All miners algos in Miners Folder can be opened by removing # or closed by adding a #.........." -foregroundcolor "Green"
+        Write-Host ""
+        Write-Host ""
+        Write-Host ""
+        Write-Host ""
+        Write-Host ""
+        Write-Host ""
+        Write-Host ""
+        Write-Host ""
+        Write-Host ""
+        Write-Host "                      Thank you Everyone For using SniffDog!!!!!" -foregroundcolor "Yellow"
+        Write-Host ""
+        Write-Host ""
+        Write-Host ""
+        Write-Host ""
+     Write-Host "1BTC = " $Rates.$Currency "$Currency" -foregroundcolor "Yellow"
+    $Miners | Where {$_.Profit -ge 1E-5 -or $_.Profit -eq $null} | Sort -Descending Type,Profit | Format-Table -GroupBy Type (
+        @{Label = "Miner"; Expression={$_.Name}}, 
+        @{Label = "Algorithm"; Expression={$_.HashRates.PSObject.Properties.Name}}, 
+        @{Label = "Speed"; Expression={$_.HashRates.PSObject.Properties.Value | ForEach {if($_ -ne $null){"$($_ | ConvertTo-Hash)/s"}else{"Bench"}}}; Align='center'}, 
+        @{Label = "BTC/Day"; Expression={$_.Profits.PSObject.Properties.Value | ForEach {if($_ -ne $null){  $_.ToString("N5")}else{"Bench"}}}; Align='right'}, 
+        @{Label = "BTC/GH/Day"; Expression={$_.Pools.PSObject.Properties.Value.Price | ForEach {($_*1000000000).ToString("N5")}}; Align='center'},
+        @{Label = "$Currency/Day"; Expression={$_.Profits.PSObject.Properties.Value | ForEach {if($_ -ne $null){($_ * $Rates.$Currency).ToString("N3")}else{"Bench"}}}; Align='center'}, 
+        @{Label = "Pool"; Expression={$_.Pools.PSObject.Properties.Value | ForEach {"$($_.Name)"}}; Align='center'},
+        @{Label = "Coins"; Expression={$_.Pools.PSObject.Properties.Value | ForEach {"  $($_.Info)"}}; Align='center'},
+        @{Label = "Pool Fees"; Expression={$_.Pools.PSObject.Properties.Value | ForEach {"$($_.Fees)%"}}; Align='center'},
+        @{Label = "# of Workers"; Expression={$_.Pools.PSObject.Properties.Value | ForEach {"$($_.Workers)"}}; Align='center'}
+        
+    ) | Out-Host
+    
+
+    #Display profit comparison
+    if (($BestMiners_Combo | Where-Object Profit -EQ $null | Measure-Object).Count -eq 0) {
+        $MinerComparisons = 
+        [PSCustomObject]@{"Miner" = "Sniffdog.. sniffs out!"}, 
+        [PSCustomObject]@{"Miner" = $BestMiners_Combo_Comparison | ForEach-Object {"$($_.Name)-$($_.Algorithm -join "/")"}}
+            
+        $BestMiners_Combo_Stat = Set-Stat -Name "Profit" -Value ($BestMiners_Combo | Measure-Object Profit -Sum).Sum
+
+        $MinerComparisons_Profit = $BestMiners_Combo_Stat.Day, ($BestMiners_Combo_Comparison | Measure-Object Profit_Comparison -Sum).Sum
+
+        $MinerComparisons_MarginOfError = $BestMiners_Combo_Stat.Day_Fluctuation, ($BestMiners_Combo_Comparison | ForEach-Object {$_.Profit_MarginOfError * (& {if ($MinerComparisons_Profit[1]) {$_.Profit_Comparison / $MinerComparisons_Profit[1]}else {1}})} | Measure-Object -Sum).Sum
+
+        $Currency | ForEach-Object {
+            $MinerComparisons[0] | Add-Member $_ ("{0:N5} ±{1:P0} ({2:N5}-{3:N5})" -f ($MinerComparisons_Profit[0] * $Rates.$_), $MinerComparisons_MarginOfError[0], (($MinerComparisons_Profit[0] * $Rates.$_) / (1 + $MinerComparisons_MarginOfError[0])), (($MinerComparisons_Profit[0] * $Rates.$_) * (1 + $MinerComparisons_MarginOfError[0])))
+            $MinerComparisons[1] | Add-Member $_ ("{0:N5} ±{1:P0} ({2:N5}-{3:N5})" -f ($MinerComparisons_Profit[1] * $Rates.$_), $MinerComparisons_MarginOfError[1], (($MinerComparisons_Profit[1] * $Rates.$_) / (1 + $MinerComparisons_MarginOfError[1])), (($MinerComparisons_Profit[1] * $Rates.$_) * (1 + $MinerComparisons_MarginOfError[1])))
+        }
+
+        if ($MinerComparisons_Profit[0] -gt $MinerComparisons_Profit[1]) {
+            $MinerComparisons_Range = ($MinerComparisons_MarginOfError | Measure-Object -Average | Select-Object -ExpandProperty Average), (($MinerComparisons_Profit[0] - $MinerComparisons_Profit[1]) / $MinerComparisons_Profit[1]) | Measure-Object -Minimum | Select-Object -ExpandProperty Minimum
+            Write-Host -BackgroundColor Yellow -ForegroundColor Black "SniffDog sniffs $([Math]::Round((((($MinerComparisons_Profit[0]-$MinerComparisons_Profit[1])/$MinerComparisons_Profit[1])-$MinerComparisons_Range)*100)))% and upto $([Math]::Round((((($MinerComparisons_Profit[0]-$MinerComparisons_Profit[1])/$MinerComparisons_Profit[1])+$MinerComparisons_Range)*100)))% more profit than the fastest (listed) miner: "
+        }
+
+        $MinerComparisons | Out-Host
+    }
 
 
 #Do nothing for 15 seconds, and check if ccminer is actually running
@@ -339,12 +400,33 @@ while($true)
         }
     }
 
+     
+
+    #You can examine the difference before and after with:
+    ps powershell* | Select *memory* | ft -auto `
+    @{Name='Virtual Memory Size (MB)';Expression={($_.VirtualMemorySize64)/1MB}; Align='center'}, `
+    @{Name='Private Memory Size (MB)';Expression={(  $_.PrivateMemorySize64)/1MB}; Align='center'},
+    @{Name='Memory Used This Session (MB)';Expression={([System.gc]::gettotalmemory("forcefullcollection") /1MB)}; Align='center'}
+
+   
+
+
+    #Reduce Memory
+    Get-Job -State Completed | Remove-Job
+    [GC]::Collect()
+    [GC]::WaitForPendingFinalizers()
+    [GC]::Collect()
+    
+    Write-Host "1BTC = " $Rates.$Currency "$Currency" -foregroundcolor "Yellow"
+
     #Do nothing for a set Interval to allow miner to run
     If ([int]$Interval -gt [int]$CheckMinerInterval) {
         Sleep ($Interval-$CheckMinerInterval)
     } else {
         Sleep ($Interval)
     }
+
+     
 
     #Save current hash rates
     $ActiveMinerPrograms | ForEach {
@@ -354,6 +436,10 @@ while($true)
         }
         else
         {
+
+            $WasActive = [math]::Round(((Get-Date)-$_.Process.StartTime).TotalSeconds) 
+             if ($WasActive -ge $StatsInterval) {
+
             $_.HashRate = 0  
             $Miner_HashRates = $null  
    
@@ -371,8 +457,11 @@ while($true)
                 }
 
                 $_.New = $false
+                $_.Hashrate_Gathered = $true 
+                Write-Host "SniffDog chews on"$_.Algorithms" then saves hashrate" -foregroundcolor "Yellow"
             }
         }
+    }
 
         #Benchmark timeout
         if($_.Benchmarked -ge 6 -or ($_.Benchmarked -ge 2 -and $_.Activated -ge 2))
@@ -385,6 +474,7 @@ while($true)
                 }
             }
         }
+        
     }
 }
 
