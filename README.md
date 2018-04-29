@@ -5,17 +5,17 @@ Thanks to Arronsace and NemosMiner --SniffDog-- has been created to Monitor Zerg
 
 Auto Benchmarks Each algo to get optimal speeds and benches throughout monitoring
 
-Fully automated / Set And Forget in Zergpool.bat/
+Fully automated / Set And Forget in startsniffin_Zergpool_Bitcoin/
 
-How to set in Zergpool.bat:
+How to set in startsniffin_Zergpool_Bitcoin:
 
-Place your Bitcoin BTC address after -u in Zergpool.bat
+Place your Bitcoin BTC address after -u in startsniffin_Zergpool_Bitcoin.bat
 
-Input your -Workername to Zergpool.bat (your Workername will also be used at Zergpool for identification of your rig)
+Input your -Workername to startsniffin_Zergpool_Bitcoin.bat (your Workername will also be used at Zergpool for identification of your rig)
 
 Choose the algos you wish to mine and let SniffDog benchmark
 
-Then go back into Zergpool.bat and select which algo you wish to mine and what interval (in seconds) you would like the auto switch set at
+Then go back into startsniffin_Zergpool_Bitcoin.bat and select which algo you wish to mine and what interval (in seconds) you would like the auto switch set at
 
 Go out with your friends and enjoy life! This is designed to catch market rise on coins when you're not there!
 
