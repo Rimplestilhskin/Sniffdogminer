@@ -1,4 +1,4 @@
-﻿$Path = '.\Bin\Ethash-Claymore\\EthDcrMiner64.exe'
+﻿$Path = '.\Bin\Ethash-Claymore\EthDcrMiner64.exe'
 
 
 $Name = (Get-Item $script:MyInvocation.MyCommand.Path).BaseName
