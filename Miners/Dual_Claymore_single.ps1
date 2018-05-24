@@ -1,5 +1,5 @@
 ﻿$Path = '.\Bin\Ethash-Claymore\EthDcrMiner64.exe'
-
+$Uri = "https://github.com/nemosminer/Claymores-Dual-Ethereum/releases/download/v11.7/ClaymoreEthMiner.v11.7.7z"
 
 $Name = (Get-Item $script:MyInvocation.MyCommand.Path).BaseName
 
