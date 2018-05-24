@@ -1,0 +1,180 @@
+  Type: NVIDIA
+
+Miner                   Algorithm                 Speed             BTC/Day     BTC/GH/Day        USD/Day       Pool
+-----                   ---------                 -----             -------     ----------        -------       ----
+CcminerTpruvotRaven     Timetravel              31.97 MH/s          0.00055      0.01731           4.187      zergpool
+ClaymoreNvidiaSia23     {Ethash, SiaClaymore} {Bench, Bench} {Bench, Bench}      0.00627       {Bench, Bench}  {MPH, }
+ClaymoreNvidiaSia23     {Ethash, Sia}         {Bench, Bench} {Bench, Bench} {0.00627, 0.00000} {Bench, Bench} {MPH, ...
+ClaymoreNvidiaSia24     {Ethash, Sia}         {Bench, Bench} {Bench, Bench} {0.00627, 0.00000} {Bench, Bench} {MPH, ...
+ClaymoreNvidiaSia23     {Ethash, SiaNiceHash} {Bench, Bench} {Bench, Bench}      0.00627       {Bench, Bench}  {MPH, }
+ClaymoreNvidiaSia22     {Ethash, SiaNiceHash} {Bench, Bench} {Bench, Bench}      0.00627       {Bench, Bench}  {MPH, }
+ClaymoreNvidiaSia21     {Ethash, SiaNiceHash} {Bench, Bench} {Bench, Bench}      0.00627       {Bench, Bench}  {MPH, }
+ClaymoreNvidiaSia21     {Ethash, SiaClaymore} {Bench, Bench} {Bench, Bench}      0.00627       {Bench, Bench}  {MPH, }
+ClaymoreNvidiaSia22     {Ethash, SiaClaymore} {Bench, Bench} {Bench, Bench}      0.00627       {Bench, Bench}  {MPH, }
+ClaymoreNvidiaSia22     {Ethash, Sia}         {Bench, Bench} {Bench, Bench} {0.00627, 0.00000} {Bench, Bench} {MPH, ...
+ClaymoreNvidiaSia24     {Ethash, SiaClaymore} {Bench, Bench} {Bench, Bench}      0.00627       {Bench, Bench}  {MPH, }
+ClaymoreNvidiaSia250    {Ethash, SiaNiceHash} {Bench, Bench} {Bench, Bench}      0.00627       {Bench, Bench}  {MPH, }
+ClaymoreNvidiaSia250    {Ethash, SiaClaymore} {Bench, Bench} {Bench, Bench}      0.00627       {Bench, Bench}  {MPH, }
+ClaymoreNvidiaSia26     {Ethash, Sia}         {Bench, Bench} {Bench, Bench} {0.00627, 0.00000} {Bench, Bench} {MPH, ...
+ClaymoreNvidiaSia26     {Ethash, SiaNiceHash} {Bench, Bench} {Bench, Bench}      0.00627       {Bench, Bench}  {MPH, }
+ClaymoreNvidiaSia26     {Ethash, SiaClaymore} {Bench, Bench} {Bench, Bench}      0.00627       {Bench, Bench}  {MPH, }
+ClaymoreNvidiaSia25     {Ethash, Sia}         {Bench, Bench} {Bench, Bench} {0.00627, 0.00000} {Bench, Bench} {MPH, ...
+ClaymoreNvidiaSia24     {Ethash, SiaNiceHash} {Bench, Bench} {Bench, Bench}      0.00627       {Bench, Bench}  {MPH, }
+ClaymoreNvidiaSia25     {Ethash, SiaClaymore} {Bench, Bench} {Bench, Bench}      0.00627       {Bench, Bench}  {MPH, }
+ClaymoreNvidiaSia250    {Ethash, Sia}         {Bench, Bench} {Bench, Bench} {0.00627, 0.00000} {Bench, Bench} {MPH, ...
+ClaymoreNvidiaSia25     {Ethash, SiaNiceHash} {Bench, Bench} {Bench, Bench}      0.00627       {Bench, Bench}  {MPH, }
+ClaymoreNvidiaSia21     {Ethash, Sia}         {Bench, Bench} {Bench, Bench} {0.00627, 0.00000} {Bench, Bench} {MPH, ...
+ClaymoreNvidiaSia16     {Ethash, SiaClaymore} {Bench, Bench} {Bench, Bench}      0.00627       {Bench, Bench}  {MPH, }
+ClaymoreNvidiaSia16     {Ethash, Sia}         {Bench, Bench} {Bench, Bench} {0.00627, 0.00000} {Bench, Bench} {MPH, ...
+ClaymoreNvidiaSia16     {Ethash, SiaNiceHash} {Bench, Bench} {Bench, Bench}      0.00627       {Bench, Bench}  {MPH, }
+ClaymoreNvidiaSia17     {Ethash, SiaClaymore} {Bench, Bench} {Bench, Bench}      0.00627       {Bench, Bench}  {MPH, }
+ClaymoreNvidiaSia17     {Ethash, Sia}         {Bench, Bench} {Bench, Bench} {0.00627, 0.00000} {Bench, Bench} {MPH, ...
+ClaymoreNvidiaSia140    {Ethash, SiaNiceHash} {Bench, Bench} {Bench, Bench}      0.00627       {Bench, Bench}  {MPH, }
+ClaymoreNvidiaSia140    {Ethash, SiaClaymore} {Bench, Bench} {Bench, Bench}      0.00627       {Bench, Bench}  {MPH, }
+ClaymoreNvidiaSia150    {Ethash, Sia}         {Bench, Bench} {Bench, Bench} {0.00627, 0.00000} {Bench, Bench} {MPH, ...
+ClaymoreNvidiaSia150    {Ethash, SiaNiceHash} {Bench, Bench} {Bench, Bench}      0.00627       {Bench, Bench}  {MPH, }
+ClaymoreNvidiaSia150    {Ethash, SiaClaymore} {Bench, Bench} {Bench, Bench}      0.00627       {Bench, Bench}  {MPH, }
+ClaymoreNvidiaSia19     {Ethash, SiaNiceHash} {Bench, Bench} {Bench, Bench}      0.00627       {Bench, Bench}  {MPH, }
+ClaymoreNvidiaSia19     {Ethash, SiaClaymore} {Bench, Bench} {Bench, Bench}      0.00627       {Bench, Bench}  {MPH, }
+ClaymoreNvidiaSia200    {Ethash, Sia}         {Bench, Bench} {Bench, Bench} {0.00627, 0.00000} {Bench, Bench} {MPH, ...
+ClaymoreNvidiaSia200    {Ethash, SiaNiceHash} {Bench, Bench} {Bench, Bench}      0.00627       {Bench, Bench}  {MPH, }
+ClaymoreNvidiaSia200    {Ethash, SiaClaymore} {Bench, Bench} {Bench, Bench}      0.00627       {Bench, Bench}  {MPH, }
+ClaymoreNvidiaSia18     {Ethash, Sia}         {Bench, Bench} {Bench, Bench} {0.00627, 0.00000} {Bench, Bench} {MPH, ...
+ClaymoreNvidiaSia17     {Ethash, SiaNiceHash} {Bench, Bench} {Bench, Bench}      0.00627       {Bench, Bench}  {MPH, }
+ClaymoreNvidiaSia18     {Ethash, SiaClaymore} {Bench, Bench} {Bench, Bench}      0.00627       {Bench, Bench}  {MPH, }
+ClaymoreNvidiaSia19     {Ethash, Sia}         {Bench, Bench} {Bench, Bench} {0.00627, 0.00000} {Bench, Bench} {MPH, ...
+ClaymoreNvidiaSia18     {Ethash, SiaNiceHash} {Bench, Bench} {Bench, Bench}      0.00627       {Bench, Bench}  {MPH, }
+ClaymoreNvidiaSia60     {Ethash, Sia}         {Bench, Bench} {Bench, Bench} {0.00627, 0.00000} {Bench, Bench} {MPH, ...
+ClaymoreNvidiaSia500    {Ethash, SiaNiceHash} {Bench, Bench} {Bench, Bench}      0.00627       {Bench, Bench}  {MPH, }
+ClaymoreNvidiaSia60     {Ethash, SiaClaymore} {Bench, Bench} {Bench, Bench}      0.00627       {Bench, Bench}  {MPH, }
+ClaymoreNvidiaSia70     {Ethash, Sia}         {Bench, Bench} {Bench, Bench} {0.00627, 0.00000} {Bench, Bench} {MPH, ...
+ClaymoreNvidiaSia60     {Ethash, SiaNiceHash} {Bench, Bench} {Bench, Bench}      0.00627       {Bench, Bench}  {MPH, }
+ClaymoreNvidiaSia50     {Ethash, SiaClaymore} {Bench, Bench} {Bench, Bench}      0.00627       {Bench, Bench}  {MPH, }
+ClaymoreNvidiaSia50     {Ethash, Sia}         {Bench, Bench} {Bench, Bench} {0.00627, 0.00000} {Bench, Bench} {MPH, ...
+ClaymoreNvidiaSia50     {Ethash, SiaNiceHash} {Bench, Bench} {Bench, Bench}      0.00627       {Bench, Bench}  {MPH, }
+ClaymoreNvidiaSia500    {Ethash, SiaClaymore} {Bench, Bench} {Bench, Bench}      0.00627       {Bench, Bench}  {MPH, }
+ClaymoreNvidiaSia500    {Ethash, Sia}         {Bench, Bench} {Bench, Bench} {0.00627, 0.00000} {Bench, Bench} {MPH, ...
+ClaymoreNvidiaSia90     {Ethash, SiaClaymore} {Bench, Bench} {Bench, Bench}      0.00627       {Bench, Bench}  {MPH, }
+ClaymoreNvidiaSia90     {Ethash, Sia}         {Bench, Bench} {Bench, Bench} {0.00627, 0.00000} {Bench, Bench} {MPH, ...
+ClaymoreNvidiaSia90     {Ethash, SiaNiceHash} {Bench, Bench} {Bench, Bench}      0.00627       {Bench, Bench}  {MPH, }
+EWBF                    Equihash                  Bench               Bench     556.01905          Bench         MPH
+Dual_Claymore_single    Ethash                    Bench               Bench      0.00627           Bench         MPH
+ClaymoreNvidiaSia70     {Ethash, SiaNiceHash} {Bench, Bench} {Bench, Bench}      0.00627       {Bench, Bench}  {MPH, }
+ClaymoreNvidiaSia70     {Ethash, SiaClaymore} {Bench, Bench} {Bench, Bench}      0.00627       {Bench, Bench}  {MPH, }
+ClaymoreNvidiaSia80     {Ethash, Sia}         {Bench, Bench} {Bench, Bench} {0.00627, 0.00000} {Bench, Bench} {MPH, ...
+ClaymoreNvidiaSia80     {Ethash, SiaNiceHash} {Bench, Bench} {Bench, Bench}      0.00627       {Bench, Bench}  {MPH, }
+ClaymoreNvidiaSia80     {Ethash, SiaClaymore} {Bench, Bench} {Bench, Bench}      0.00627       {Bench, Bench}  {MPH, }
+ClaymoreNvidiaSia450    {Ethash, SiaNiceHash} {Bench, Bench} {Bench, Bench}      0.00627       {Bench, Bench}  {MPH, }
+ClaymoreNvidiaSia29     {Ethash, Sia}         {Bench, Bench} {Bench, Bench} {0.00627, 0.00000} {Bench, Bench} {MPH, ...
+ClaymoreNvidiaSia28     {Ethash, SiaNiceHash} {Bench, Bench} {Bench, Bench}      0.00627       {Bench, Bench}  {MPH, }
+ClaymoreNvidiaSia29     {Ethash, SiaClaymore} {Bench, Bench} {Bench, Bench}      0.00627       {Bench, Bench}  {MPH, }
+ClaymoreNvidiaSia300    {Ethash, Sia}         {Bench, Bench} {Bench, Bench} {0.00627, 0.00000} {Bench, Bench} {MPH, ...
+ClaymoreNvidiaSia29     {Ethash, SiaNiceHash} {Bench, Bench} {Bench, Bench}      0.00627       {Bench, Bench}  {MPH, }
+ClaymoreNvidiaSia27     {Ethash, SiaClaymore} {Bench, Bench} {Bench, Bench}      0.00627       {Bench, Bench}  {MPH, }
+ClaymoreNvidiaSia27     {Ethash, Sia}         {Bench, Bench} {Bench, Bench} {0.00627, 0.00000} {Bench, Bench} {MPH, ...
+ClaymoreNvidiaSia27     {Ethash, SiaNiceHash} {Bench, Bench} {Bench, Bench}      0.00627       {Bench, Bench}  {MPH, }
+ClaymoreNvidiaSia28     {Ethash, SiaClaymore} {Bench, Bench} {Bench, Bench}      0.00627       {Bench, Bench}  {MPH, }
+ClaymoreNvidiaSia28     {Ethash, Sia}         {Bench, Bench} {Bench, Bench} {0.00627, 0.00000} {Bench, Bench} {MPH, ...
+ClaymoreNvidiaSia400    {Ethash, SiaClaymore} {Bench, Bench} {Bench, Bench}      0.00627       {Bench, Bench}  {MPH, }
+ClaymoreNvidiaSia400    {Ethash, Sia}         {Bench, Bench} {Bench, Bench} {0.00627, 0.00000} {Bench, Bench} {MPH, ...
+ClaymoreNvidiaSia400    {Ethash, SiaNiceHash} {Bench, Bench} {Bench, Bench}      0.00627       {Bench, Bench}  {MPH, }
+ClaymoreNvidiaSia450    {Ethash, SiaClaymore} {Bench, Bench} {Bench, Bench}      0.00627       {Bench, Bench}  {MPH, }
+ClaymoreNvidiaSia450    {Ethash, Sia}         {Bench, Bench} {Bench, Bench} {0.00627, 0.00000} {Bench, Bench} {MPH, ...
+ClaymoreNvidiaSia300    {Ethash, SiaNiceHash} {Bench, Bench} {Bench, Bench}      0.00627       {Bench, Bench}  {MPH, }
+ClaymoreNvidiaSia300    {Ethash, SiaClaymore} {Bench, Bench} {Bench, Bench}      0.00627       {Bench, Bench}  {MPH, }
+ClaymoreNvidiaSia350    {Ethash, Sia}         {Bench, Bench} {Bench, Bench} {0.00627, 0.00000} {Bench, Bench} {MPH, ...
+ClaymoreNvidiaSia350    {Ethash, SiaNiceHash} {Bench, Bench} {Bench, Bench}      0.00627       {Bench, Bench}  {MPH, }
+ClaymoreNvidiaSia350    {Ethash, SiaClaymore} {Bench, Bench} {Bench, Bench}      0.00627       {Bench, Bench}  {MPH, }
+ClaymoreNvidiaSia140    {Ethash, Sia}         {Bench, Bench} {Bench, Bench} {0.00627, 0.00000} {Bench, Bench} {MPH, ...
+ClaymoreNvidia2gbSia110 {Ethash2gb, Sia}      {Bench, Bench} {Bench, Bench}      0.00000       {Bench, Bench}  {, MPH}
+ClaymoreNvidia2gbSia100 {Ethash2gb, Sia}      {Bench, Bench} {Bench, Bench}      0.00000       {Bench, Bench}  {, MPH}
+ClaymoreNvidia2gbSia120 {Ethash2gb, Sia}      {Bench, Bench} {Bench, Bench}      0.00000       {Bench, Bench}  {, MPH}
+ClaymoreNvidia2gbSia140 {Ethash2gb, Sia}      {Bench, Bench} {Bench, Bench}      0.00000       {Bench, Bench}  {, MPH}
+ClaymoreNvidia2gbSia130 {Ethash2gb, Sia}      {Bench, Bench} {Bench, Bench}      0.00000       {Bench, Bench}  {, MPH}
+ClaymoreNvidia2gbLbry60 {Ethash2gb, Lbry}     {Bench, Bench} {Bench, Bench}      0.00002       {Bench, Bench} {, bla...
+ClaymoreNvidia2gbLbry55 {Ethash2gb, Lbry}     {Bench, Bench} {Bench, Bench}      0.00002       {Bench, Bench} {, bla...
+ClaymoreNvidia2gbLbry65 {Ethash2gb, Lbry}     {Bench, Bench} {Bench, Bench}      0.00002       {Bench, Bench} {, bla...
+ClaymoreNvidia2gbLbry75 {Ethash2gb, Lbry}     {Bench, Bench} {Bench, Bench}      0.00002       {Bench, Bench} {, bla...
+ClaymoreNvidia2gbLbry70 {Ethash2gb, Lbry}     {Bench, Bench} {Bench, Bench}      0.00002       {Bench, Bench} {, bla...
+ClaymoreNvidia2gbSia21  {Ethash2gb, Sia}      {Bench, Bench} {Bench, Bench}      0.00000       {Bench, Bench}  {, MPH}
+ClaymoreNvidia2gbSia200 {Ethash2gb, Sia}      {Bench, Bench} {Bench, Bench}      0.00000       {Bench, Bench}  {, MPH}
+ClaymoreNvidia2gbSia22  {Ethash2gb, Sia}      {Bench, Bench} {Bench, Bench}      0.00000       {Bench, Bench}  {, MPH}
+ClaymoreNvidia2gbSia24  {Ethash2gb, Sia}      {Bench, Bench} {Bench, Bench}      0.00000       {Bench, Bench}  {, MPH}
+ClaymoreNvidia2gbSia23  {Ethash2gb, Sia}      {Bench, Bench} {Bench, Bench}      0.00000       {Bench, Bench}  {, MPH}
+ClaymoreNvidia2gbSia16  {Ethash2gb, Sia}      {Bench, Bench} {Bench, Bench}      0.00000       {Bench, Bench}  {, MPH}
+ClaymoreNvidia2gbSia150 {Ethash2gb, Sia}      {Bench, Bench} {Bench, Bench}      0.00000       {Bench, Bench}  {, MPH}
+ClaymoreNvidia2gbSia17  {Ethash2gb, Sia}      {Bench, Bench} {Bench, Bench}      0.00000       {Bench, Bench}  {, MPH}
+ClaymoreNvidia2gbSia19  {Ethash2gb, Sia}      {Bench, Bench} {Bench, Bench}      0.00000       {Bench, Bench}  {, MPH}
+ClaymoreNvidia2gbSia18  {Ethash2gb, Sia}      {Bench, Bench} {Bench, Bench}      0.00000       {Bench, Bench}  {, MPH}
+ClaymoreNvidia2gbLbry50 {Ethash2gb, Lbry}     {Bench, Bench} {Bench, Bench}      0.00002       {Bench, Bench} {, bla...
+Ccmineralexis           Nist5                     Bench               Bench      0.00016           Bench      zergpool
+Ccmineralexis           MyriadGroestl             Bench               Bench      0.00016           Bench      Hashre...
+Ccmineralexis           Sib                       Bench               Bench      0.00159           Bench      zergpool
+Ccmineralexis           X11                       Bench               Bench      0.00003           Bench      zergpool
+Ccmineralexis           Skein                     Bench               Bench      0.00059           Bench         MPH
+Ccmineralexis           Blake2s                   Bench               Bench      0.00001           Bench      zergpool
+Ccminer-krnlx           Xevan                     Bench               Bench      0.06045           Bench      blazepool
+Ccmineralexis           Blakecoin                 Bench               Bench      0.00000           Bench      blazepool
+Ccmineralexis           Hsr                       Bench               Bench      0.01525           Bench      zergpool
+Ccmineralexis           C11                       Bench               Bench      0.01292           Bench      ahashpool
+CcminerTpruvotRaven     Bitcore                   Bench               Bench      0.01030           Bench      blazepool
+CcminerSuprminer        X16s                      Bench               Bench      0.01169           Bench      blazepool
+CcminerTpruvotRaven     Hmq1725                   Bench               Bench      0.18114           Bench      blazepool
+ClaymoreNvidia2gbLbry45 {Ethash2gb, Lbry}     {Bench, Bench} {Bench, Bench}      0.00002       {Bench, Bench} {, bla...
+CcminerTpruvotRaven     Lyra2z                    Bench               Bench      0.11664           Bench      zergpool
+Ccmineralexis           X17                       Bench               Bench      0.02204           Bench      zergpool
+Ccmineralexis           X11evo                    Bench               Bench      0.00698           Bench      minemoney
+CcminerKlaust           Groestl                   Bench               Bench      0.00033           Bench      blazepool
+CcminerSuprminer        X16r                      Bench               Bench      0.02253           Bench      blazepool
+CcminerKlaust           NeoScrypt                 Bench               Bench      0.23997           Bench      blazepool
+ClaymoreNvidiaLbry70    {Ethash, Lbry}        {Bench, Bench} {Bench, Bench} {0.00627, 0.00002} {Bench, Bench} {MPH, ...
+ClaymoreNvidiaLbry65    {Ethash, Lbry}        {Bench, Bench} {Bench, Bench} {0.00627, 0.00002} {Bench, Bench} {MPH, ...
+ClaymoreNvidiaLbry75    {Ethash, Lbry}        {Bench, Bench} {Bench, Bench} {0.00627, 0.00002} {Bench, Bench} {MPH, ...
+ClaymoreNvidiaSia100    {Ethash, SiaClaymore} {Bench, Bench} {Bench, Bench}      0.00627       {Bench, Bench}  {MPH, }
+ClaymoreNvidiaSia100    {Ethash, Sia}         {Bench, Bench} {Bench, Bench} {0.00627, 0.00000} {Bench, Bench} {MPH, ...
+ClaymoreNvidiaLbry45    {Ethash, Lbry}        {Bench, Bench} {Bench, Bench} {0.00627, 0.00002} {Bench, Bench} {MPH, ...
+ClaymoreNvidiaDecred75  {Decred, Ethash}      {Bench, Bench} {Bench, Bench}      0.00627       {Bench, Bench}  {, MPH}
+ClaymoreNvidiaLbry50    {Ethash, Lbry}        {Bench, Bench} {Bench, Bench} {0.00627, 0.00002} {Bench, Bench} {MPH, ...
+ClaymoreNvidiaLbry60    {Ethash, Lbry}        {Bench, Bench} {Bench, Bench} {0.00627, 0.00002} {Bench, Bench} {MPH, ...
+ClaymoreNvidiaLbry55    {Ethash, Lbry}        {Bench, Bench} {Bench, Bench} {0.00627, 0.00002} {Bench, Bench} {MPH, ...
+ClaymoreNvidiaSia120    {Ethash, SiaNiceHash} {Bench, Bench} {Bench, Bench}      0.00627       {Bench, Bench}  {MPH, }
+ClaymoreNvidiaSia120    {Ethash, SiaClaymore} {Bench, Bench} {Bench, Bench}      0.00627       {Bench, Bench}  {MPH, }
+ClaymoreNvidiaSia130    {Ethash, Sia}         {Bench, Bench} {Bench, Bench} {0.00627, 0.00000} {Bench, Bench} {MPH, ...
+ClaymoreNvidiaSia130    {Ethash, SiaNiceHash} {Bench, Bench} {Bench, Bench}      0.00627       {Bench, Bench}  {MPH, }
+ClaymoreNvidiaSia130    {Ethash, SiaClaymore} {Bench, Bench} {Bench, Bench}      0.00627       {Bench, Bench}  {MPH, }
+ClaymoreNvidiaSia110    {Ethash, Sia}         {Bench, Bench} {Bench, Bench} {0.00627, 0.00000} {Bench, Bench} {MPH, ...
+ClaymoreNvidiaSia100    {Ethash, SiaNiceHash} {Bench, Bench} {Bench, Bench}      0.00627       {Bench, Bench}  {MPH, }
+ClaymoreNvidiaSia110    {Ethash, SiaClaymore} {Bench, Bench} {Bench, Bench}      0.00627       {Bench, Bench}  {MPH, }
+ClaymoreNvidiaSia120    {Ethash, Sia}         {Bench, Bench} {Bench, Bench} {0.00627, 0.00000} {Bench, Bench} {MPH, ...
+ClaymoreNvidiaSia110    {Ethash, SiaNiceHash} {Bench, Bench} {Bench, Bench}      0.00627       {Bench, Bench}  {MPH, }
+ClaymoreNvidiaDecred70  {Decred, Ethash}      {Bench, Bench} {Bench, Bench}      0.00627       {Bench, Bench}  {, MPH}
+ClaymoreNvidia2gbSia300 {Ethash2gb, Sia}      {Bench, Bench} {Bench, Bench}      0.00000       {Bench, Bench}  {, MPH}
+ClaymoreNvidia2gbSia29  {Ethash2gb, Sia}      {Bench, Bench} {Bench, Bench}      0.00000       {Bench, Bench}  {, MPH}
+ClaymoreNvidia2gbSia350 {Ethash2gb, Sia}      {Bench, Bench} {Bench, Bench}      0.00000       {Bench, Bench}  {, MPH}
+ClaymoreNvidia2gbSia450 {Ethash2gb, Sia}      {Bench, Bench} {Bench, Bench}      0.00000       {Bench, Bench}  {, MPH}
+ClaymoreNvidia2gbSia400 {Ethash2gb, Sia}      {Bench, Bench} {Bench, Bench}      0.00000       {Bench, Bench}  {, MPH}
+ClaymoreNvidia2gbSia250 {Ethash2gb, Sia}      {Bench, Bench} {Bench, Bench}      0.00000       {Bench, Bench}  {, MPH}
+ClaymoreNvidia2gbSia25  {Ethash2gb, Sia}      {Bench, Bench} {Bench, Bench}      0.00000       {Bench, Bench}  {, MPH}
+ClaymoreNvidia2gbSia26  {Ethash2gb, Sia}      {Bench, Bench} {Bench, Bench}      0.00000       {Bench, Bench}  {, MPH}
+ClaymoreNvidia2gbSia28  {Ethash2gb, Sia}      {Bench, Bench} {Bench, Bench}      0.00000       {Bench, Bench}  {, MPH}
+ClaymoreNvidia2gbSia27  {Ethash2gb, Sia}      {Bench, Bench} {Bench, Bench}      0.00000       {Bench, Bench}  {, MPH}
+ClaymoreNvidiaDecred50  {Decred, Ethash}      {Bench, Bench} {Bench, Bench}      0.00627       {Bench, Bench}  {, MPH}
+ClaymoreNvidiaDecred45  {Decred, Ethash}      {Bench, Bench} {Bench, Bench}      0.00627       {Bench, Bench}  {, MPH}
+ClaymoreNvidiaDecred55  {Decred, Ethash}      {Bench, Bench} {Bench, Bench}      0.00627       {Bench, Bench}  {, MPH}
+ClaymoreNvidiaDecred65  {Decred, Ethash}      {Bench, Bench} {Bench, Bench}      0.00627       {Bench, Bench}  {, MPH}
+ClaymoreNvidiaDecred60  {Decred, Ethash}      {Bench, Bench} {Bench, Bench}      0.00627       {Bench, Bench}  {, MPH}
+ClaymoreNvidia2gbSia60  {Ethash2gb, Sia}      {Bench, Bench} {Bench, Bench}      0.00000       {Bench, Bench}  {, MPH}
+ClaymoreNvidia2gbSia50  {Ethash2gb, Sia}      {Bench, Bench} {Bench, Bench}      0.00000       {Bench, Bench}  {, MPH}
+ClaymoreNvidia2gbSia70  {Ethash2gb, Sia}      {Bench, Bench} {Bench, Bench}      0.00000       {Bench, Bench}  {, MPH}
+ClaymoreNvidia2gbSia90  {Ethash2gb, Sia}      {Bench, Bench} {Bench, Bench}      0.00000       {Bench, Bench}  {, MPH}
+ClaymoreNvidia2gbSia80  {Ethash2gb, Sia}      {Bench, Bench} {Bench, Bench}      0.00000       {Bench, Bench}  {, MPH}
+
+
+
+Virtual Memory Size (MB) Private Memory Size (MB) Memory Used This Session (MB)
+------------------------ ------------------------ -----------------------------
+    2101914.54296875            41.203125               46.3225479125977
+    2102038.84765625           126.0703125              46.3262786865234
+
+
+1BTC =  7563 USD
